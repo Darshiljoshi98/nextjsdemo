@@ -3,7 +3,7 @@ import { React, useEffect, useState } from 'react';
 import styles from "@/app/styles/contact.module.css"
 import { useRouter } from 'next/navigation';
 
-const viewContact = ({ params }) => {
+const ViewContact = ({ params }) => {
     const [userData, setUserData] = useState([]);
     const router = useRouter();
     useEffect(() => {
@@ -35,4 +35,4 @@ const viewContact = ({ params }) => {
     );
 };
 
-export default viewContact;
+export default ViewContact;

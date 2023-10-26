@@ -20,7 +20,7 @@ const [status, setStatus] = useState(null);
         console.log(data)
         setUser(data.data[0])
       })
-  }, [])
+  }, [params._id])
 
   const handleSubmit = async (e) => {
     debugger
@@ -65,16 +65,8 @@ function handleChange(e) {
 }
 
   return (
-    <div>EditPage{params.id}
-      <div>
-
-        {/* {console.log(userData)} */}
-        {/* <ul class="list-group">
-          <li class="list-group-item">{userData.username}</li>
-          <li class="list-group-item">{userData.email}</li>
-          <li class="list-group-item">{userData.phone}</li>
-        </ul> */}
-      </div>
+    <div>EditPage
+     
       <form className={styles.contact_form} onSubmit={handleSubmit}>
                 <div className={styles.input_field}>
                     <label htmlFor="username" className={styles.label}>

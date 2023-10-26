@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from 'bootstrap';
 
-export default function page() {
+export default function Contact() {
     useEffect(() => {
         getList();
     }, [])
@@ -163,7 +163,7 @@ export default function page() {
                     {showNoDataMessage ? <p className={styles.error_msg}>There was an error submitting your message. Please try again.</p> : ''}
                     {
                         userData.map((currentData => {
-                            return <ul class="list-group">
+                            return <ul class="list-group"  key={currentData._id}>
                                 <div class="row">
                                     <div class="col">
                                         <Link href={`/contact/${currentData._id}`} >

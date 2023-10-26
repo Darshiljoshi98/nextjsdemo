@@ -4,6 +4,9 @@ import styles from "@/app/styles/contact.module.css"
 import { useRouter } from 'next/navigation';
 
 const ViewContact = ({ params }) => {
+    if(params._id === null || params._id === undefined){
+        params._id = 1
+      }
     const [userData, setUserData] = useState([]);
     const router = useRouter();
     useEffect(() => {

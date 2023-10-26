@@ -8,12 +8,14 @@ import {
     faPencilSquare,
     faTrash
 } from "@fortawesome/free-solid-svg-icons";
-import { Button } from 'bootstrap';
+
 
 export default function Contact() {
+    
     useEffect(() => {
         getList();
     }, [])
+
     const [status, setStatus] = useState(null);
     const [deleteStatus, setDeleteStatus] = useState(null);
     const [userData, SetUserData] = useState([]);

@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react'
 import styles from '../../../styles/contact.module.css'
 import { Router, useRouter } from 'next/navigation'
 const EditPage = ({ params }) => {
+  if(params._id === null || params._id === undefined){
+    params._id = 1
+  }
   // const [userData, setUserData] = useState([]);
   const [user, setUser] = useState({
     username: "",
